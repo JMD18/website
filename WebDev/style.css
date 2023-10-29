@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    background-color: #e6cdb1;
+    
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(0, 59, 25);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background:   rgb(0, 59, 25);
+  }
+@font-face {
+    font-family:"abraham";
+    src: url(fonts/7\ ABRAHAM\ SHADOW\ DEMO.OTF);
+}
+
+
+html{
+    min-height: 100vh;
+    /* overflow-y: hidden; */
+    /* overflow-x: hidden; */
+}
+
+nav{
+    /* border: 1px red solid; */
+    direction: rtl;
+    padding: 1% 1%;
+    background-color: #e6cdb1;
+    z-index: 9999;
+
+}
+
+nav a {
+    text-decoration: none;
+    padding-right: 20px;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color:rgb(0, 59, 25);
+    /* border: 1px red solid; */
+    font-family: 'abraham';
+    font-size: 30px;
+    font-weight: 200;
+    color: rgb(0, 59, 25);
+    
+}
+
+#container{
+    display: grid;
+    grid-template-columns: 1fr 13fr 1fr;
+    border: 1px solid red;
+    background-color: #866c5a;
+    height: 100vh;
+
+}
+
+#social_wrapper{
+    border: 1px solid red;
+    text-decoration: none;
+
+    max-width: 100%;
+    min-width: 100%;
+    background-color: #e6cdb1;
+    
+}
+
+#socials{
+    margin-top: 70vh;
+    border: 1px solid red;
+    position: fixed;
+}
+
+#socials a{
+    display: block;
+    text-decoration: none;
+    border: 1px solid red;
+    min-width: 100%;
+    max-width: 100%;
+    padding-bottom: 5%;
+}
+
+#main_container{
+    border: 1px solid red;
+    text-decoration: none;
+    height: 100vh;
+    margin: auto;
+    
+}
+
+#home{
+    width:70%;
+    border: 1px solid red;
+    text-align: center;
+    margin-left: 15%;
+}
+
+#experience{
+    width:70%;
+    border: 1px solid red;
+    text-align: left;
+    margin-left: 15%;
+}
+
+#skills{
+    width:70%;
+    border: 1px solid red;
+    text-align: left;
+    margin-left: 15%;
+}
+
+#projects{
+    width:70%;
+    border: 1px solid red;
+    text-align: left;
+    margin-left: 15%;
+}
+
+#email {
+    font-family: "abraham";
+    font-size: 20px;
+    font-weight: 200;
+    color: rgb(0, 59, 25);
+}
+
+#email a {
+    border: 1px solid red;
+    text-decoration: none;
+    display: block;
+    transform: rotate(90deg);
+    margin-top: 70vh;
+    position: fixed;
+    font-size: 20px;
+    font-weight: 200;
+    color: rgb(0, 59, 25);
+
+}
+
+footer{
+    background-color: #e6cdb1;
+    max-height: 5%;
+    padding: 0.5% 0%;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
