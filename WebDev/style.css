@@ -1,5 +1,6 @@
 *{
     margin: 0;
+    border: 1px red solid;
 }
 
 /* width */
@@ -21,7 +22,7 @@
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background:   rgb(0, 59, 25);
+    background:   rgb(20, 79, 45);
   }
 @font-face {
     font-family:"abraham";
@@ -31,9 +32,11 @@
 
 html{
     min-height: 100vh;
-    /* overflow-y: hidden; */
-    /* overflow-x: hidden; */
+    overflow: auto;
+
 }
+
+/********* NAV BAR *********/
 
 nav{
     /* border: 1px red solid; */
@@ -41,6 +44,7 @@ nav{
     padding: 1% 1%;
     background-color: #e6cdb1;
     z-index: 9999;
+    border-bottom: black;
 
 }
 
@@ -48,7 +52,7 @@ nav a {
     text-decoration: none;
     padding-right: 20px;
     -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color:rgb(0, 59, 25);
+    -webkit-text-stroke-color:rgb(20, 79, 45);
     /* border: 1px red solid; */
     font-family: 'abraham';
     font-size: 30px;
@@ -57,14 +61,20 @@ nav a {
     
 }
 
+/********* END NAV BAR *********/
+
 #container{
     display: grid;
     grid-template-columns: 1fr 13fr 1fr;
-    border: 1px solid red;
-    background-color: #866c5a;
-    height: 100vh;
-
+    /* border: 1px solid red; */
+    background: linear-gradient(#e6cdb1, rgb(20, 79, 45));
+    font-family: 'abraham';
+    font-weight: 50;
+    font-size: 20px;
+    -webkit-text-fill-color: black;
 }
+
+/********* SOCIALS *********/
 
 #social_wrapper{
     border: 1px solid red;
@@ -73,13 +83,15 @@ nav a {
     max-width: 100%;
     min-width: 100%;
     background-color: #e6cdb1;
-    
+    display: block;    
 }
 
 #socials{
     margin-top: 70vh;
     border: 1px solid red;
-    position: fixed;
+    
+    position:fixed;
+    /* position: fixed; */
 }
 
 #socials a{
@@ -88,14 +100,19 @@ nav a {
     border: 1px solid red;
     min-width: 100%;
     max-width: 100%;
-    padding-bottom: 5%;
+    padding-bottom: 15% 0;
 }
+
+/********* END SOCIALS *********/
+
+
+/********* MAIN CONTAINER *********/
 
 #main_container{
     border: 1px solid red;
     text-decoration: none;
-    height: 100vh;
-    margin: auto;
+    height: 100%;
+    padding: 5 0;
     
 }
 
@@ -127,6 +144,11 @@ nav a {
     margin-left: 15%;
 }
 
+/********* END MAIN *********/
+
+
+/********* EMAIL *********/
+
 #email {
     font-family: "abraham";
     font-size: 20px;
@@ -147,8 +169,10 @@ nav a {
 
 }
 
+/********* END EMAIL *********/
+
 footer{
-    background-color: #e6cdb1;
+    background-color: rgb(20, 79, 45);
     max-height: 5%;
     padding: 0.5% 0%;
     bottom: 0;
