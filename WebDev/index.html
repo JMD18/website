@@ -23,21 +23,18 @@
 		</nav>
     </header>
 
-	<div id="container">
+    <div id="container">
 
-	
+        <!-- <div id="socials_wrapper">
 
+            <div id="socials">
+                <a href="https://github.com/JMD18" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/josh-daugherty" target="_blank">LinkedIn</a>
+                <a href="https://www.instagram.com/joshdaugherty18" target="_blank">Instagram</a>
+                <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+            </div>
 
-	<div id="socials_wrapper">
-		
-		<div id="socials">
-			<a href=""><img src="" alt="">	GitHub		</a>
-			<a href="">	LinkedIn	</a>
-			<a href="">	Instagram	</a>
-			<a href=""> Facebook	</a>	
-		</div>
-		
-	</div>
+        </div> -->
 
 	<div id="main_middle">
 
@@ -62,7 +59,7 @@
         <h3>    University of Alabama at Birmingham, Teaching Assistant: Probability & Statistics   </h3>
             <ul>
                 <li>    Teach Probability Theory and Python programming (Numpy, Matplotlib, and other libraries)    </li>
-                <li>    Assist 100+ students by hosting lectures, office hours, and study sessions                  </li>
+                <li>    Assist 200+ students by hosting lectures, office hours, and study sessions                  </li>
                 <li>    Proctor exams, collaborate with the professor on course materials, and mentor students      </li>
                 <li>    Prepare lecture material, grade assignments, and provide valuable feedback for students     </li>
             </ul>
@@ -90,17 +87,49 @@
 
         <h2>Skills</h2>
 
-        <p>     Programming: Python, C/C++, Java, JavaScript, Git, Bash/Powershell, GDScript, PostgreSQL                                                     </p>
-        <p>     Mathematics: Linear Algebra, Calculus, Probability Theory, Discrete Maths, Numerical Analysis, Real Analysis, Differential Equations         </p>
-        <p>     Software: Linux, VS Code, IntelliJ, Docker, Git, Godot Engine, JavaFX, Flask, Google Workspace, MS Office, Adobe Creative Suite              </p>
+        <p>     <b>Programming:</b> Python, C/C++, Java, JavaScript, Git, Bash/Powershell, GDScript, PostgreSQL                                                     </p>
+        <p>     <b>Mathematics:</b> Linear Algebra, Calculus, Probability Theory, Discrete Maths, Numerical Analysis, Real Analysis, Differential Equations         </p>
+        <p>     <b>Software:</b> Linux, VS Code, IntelliJ, Docker, Git, Godot Engine, JavaFX, Flask, Google Workspace, MS Office, Adobe Creative Suite              </p>
 
     </section>
-            <section>
+    <section>
 
 
     <!-- PROJECTS -->
     <section id="projects">
         <h2>Projects</h2>
+
+
+        <!-- Built in 24 hours for UA Hackathon 2024.
+                        <b>React</b> web app designed to help CGI in their
+                        recruiting efforts. The application allows mobile users
+                        to easily input information into a
+                        <b>MongoDB</b> database. The app implemets a combined
+                        authenticaion portaal for both students and CGI staff.
+                        Endpoints are secure and cannot be accessed manually.
+                        Students can update information whenever they need, and 
+                        upload resumes. HR staff can add addiitonal feedback and
+                        update any fields. They can also use
+                        <b>OpenAI API</b> to generate feedback based on parsing
+                        the submitted resume from the student. -->
+
+        <h3>    CGI Recruit Tracker    </h3>           <h4>    March 2024    </h4>
+            <h4>    HR Database Management & Applicant Login Portal    </h4>
+                <ul>
+                    Built in 24 hours for UA Innovate / Hackathon 2024.
+                        <b>React</b> web app designed to help <a href="https://www.cgi.com/" target="_blank">CGI</a> in their
+                        recruiting efforts. The application allows mobile users
+                        to easily input information into a
+                        <b>MongoDB</b> database. The app implemets a combined
+                        authenticaion portaal for both students and CGI staff.
+                        Endpoints are secure and cannot be accessed manually.
+                        Students can update information whenever they need, and
+                        upload resumes. HR staff can add addiitonal feedback and
+                        update any fields. I also implemented a feature using an <b>OpenAI
+                        API</b> call to generate feedback for the resume provided by the student,
+                        to help HR staff with the hiring process.
+
+                </ul>
 
         <h3>    Maze-Solving Bot    </h3>           <h4>    Sept 2023 - Dec 2023    </h4>
             <h4>    CS 660 - Artificial Intelligence (Course Project)   </h4>
@@ -141,19 +170,29 @@
     </section> -->
 
 
+    <div id="socials_wrapper">
 
-	</div>
+        <div id="socials">
+            <a href="https://github.com/JMD18" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/josh-daugherty" target="_blank">LinkedIn</a>
+            <a href="https://www.instagram.com/joshdaugherty18" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+        </div>
+    </div>
 
-	<div id="email">
 
-		<a href="mailto:joshmd00@gmail.com"> joshmd00@gmail.com</a>
 	</div>
 
 	</div>	
 
 	<footer>
-        <p>&copy; 2023 Joshua Daugherty. All rights reserved.</p>
+        <p>&copy; 2023 Joshua Daugherty    |    All rights reserved    |    <a id=email-link href=mailto:joshmd00@gmail.com target="_blank">Contact Me!</a></p>
     </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.polyfills.js"></script>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
 </body>
 
 </html>

@@ -6,25 +6,32 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 header {
     background-color: #4d8a66;
     color: #fff;
+    max-height: 8vh; /* Adjust header height */
     padding: 10px;
     text-align: center;
+    position: fixed; /* Fixed position to stick to the top */
+    top: 0; /* Stick to the top */
+    width: 100%; /* Ensure header stretches across the viewport */
+    z-index: 999; /* Ensure header is above other content */
 }
 
 nav {
     display: flex;
     justify-content: flex-end;
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    padding: 8px;
+    margin: 0 10px;
+    padding: 10px;
 }
 
 nav a:hover {
@@ -36,20 +43,44 @@ nav a:hover {
     max-width: 800px;
     margin: 0 auto;
     background-color: #fff;
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    margin-top: 10vh; /* Adjust according to the height of the header */
+    margin-bottom: 10vh;
+    height: 100vh - 80px; /* Adjust container height according to viewport height and header/footer height */
 }
+
+/* Add a bottom border to ul elements */
+#projects ul {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px; /* Optional: Add some padding to space out the borders */
+    margin-bottom: 20px; /* Optional: Add margin to space out the projects */
+     /* Optional: Add margin to space out the projects */
+}
+
 
 #socials_wrapper {
+    background-color: #FFF;
     text-align: center;
+
 }
 
+/* #socials_wrapper h4 {
+    text-align: center;
+    margin-bottom: 3vh;
+
+} */
+
 #socials a {
-    color: #333;
+    color: #4d8a66;
     text-decoration: none;
+    background-color: #e8f3ea;
     margin: 0 10px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold ;
+    
 }
 
 #main_middle {
@@ -96,9 +127,12 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px;
-    position: fixed;
     bottom: 0;
     width: 100%;
+    position: fixed; /* Fixed position to stick to the bottom */
+    font-weight: bold;
+    z-index: 999; /* Ensure footer is above other content */
+
 }
 
 #email {
@@ -112,6 +146,12 @@ footer {
     font-weight: bold;
 }
 
-#email a:hover {
+#email-link {
+    color: #FFF; /* Set the color to your desired value */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#email-link:hover {
     text-decoration: underline;
 }
