@@ -140,6 +140,10 @@ footer {
 
 }
 
+#socials a i {
+    margin-right: 5px; /* Adjust the margin as needed */
+}
+
 
 #email-link {
     color: #FFF; /* Set the color to your desired value */
