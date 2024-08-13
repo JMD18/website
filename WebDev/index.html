@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joshua Daugherty</title>
-	<link rel="stylesheet" href="style2.css">
+	<link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
@@ -41,15 +41,9 @@
 
 
     <section id="home">
-        <h1>	Hi, I'm Josh		</h1>
+        <h1>	Joshua Daugherty    </h1>
         <p>		Software Developer	</p>
     </section>
-
-    <!-- <section id="about">
-        <h2>About Us</h2>
-        <p>Information about your company or yourself goes here.</p>
-    </section> -->
-
 
 
     <!-- EXPERIENCE -->
@@ -57,18 +51,20 @@
 
         <h2>Experience</h2>
 
-        <h3>Celestia Diagnostics, Python Developer</h3>
+        <h3>    Celestia Diagnostics, Lead Python Developer (current)   </h3>
             <ul>
-                <li>    Write image acquisition and analysis pipeline from scratch.     </li>
-                <li>    Work with 6D-image arrays to manipulate and analyze images.     </li>
-                <li>    Work closely with the team to determine implementation specifications.     </li>
+                <li>    Write and design our full-scale production image acquisition and analysis pipeline.     </li>
+                <li>    Created GUI application via CustomTKinter to be used at our lab and physician's clinics.     </li>
+                <li>    Built a custom application for enhanced image viewing, data analysis, and ___________ using Napari.       </li>
+                <li>    Write and maintain custom libraries for use within our analysis scripts.    </li>
+                <li>    Test and analyze ML algorithms/implementations for cell segmentation using Omnipose.    </li>
 
             </ul>
 
-        <h3>    University of Alabama at Birmingham, Teaching Assistant: Probability & Statistics   </h3>
+        <h3>    University of Alabama at Birmingham, Graduate Teaching Assistant: Probability & Statistics   </h3>
             <ul>
                 <li>    Teach Probability Theory and Python programming (Numpy, Matplotlib, and other libraries)    </li>
-                <li>    Assist 200+ undergraduate and graduate students by hosting lectures, office hours, and study sessions                  </li>
+                <li>    Assist 200+ graduate and undergraduate students by hosting lectures, office hours, and study sessions                  </li>
                 <li>    Proctor exams, collaborate with the professor on course materials, and mentor students      </li>
                 <li>    Prepare lecture material, grade assignments, and provide valuable feedback for students     </li>
             </ul>
@@ -138,7 +134,7 @@
     <h2>Projects</h2>
 
     <div class="project">
-        <h3> <img id="project-img" src="img/recruit.png" alt="Recruit-Tracker-Icon"/> CGI Applicant Tracker </h3> 
+        <h3> <img id="project-img" src="img/misc/recruit.png" alt="Recruit-Tracker-Icon"/> CGI Applicant Tracker </h3> 
         <h4>March 2024</h4>
         <h4>HR Database Management & Applicant Login Portal </h4>
         <ul>
@@ -158,7 +154,7 @@
     </div>
 
     <div class="project">
-        <h3> <img id="project-img" src="img/greenbot.png" alt="AI-robot"/> Maze-Solving AI Bot </h3>
+        <h3> <img id="project-img" src="img/misc/greenbot.png" alt="AI-robot"/> Maze-Solving AI Bot </h3>
         <!-- <h4>Sep 2023 - Dec 2023</h4> -->
         <h4> Fall Semester 2023</h4>
         <h4>CS 660 - Artificial Intelligence (Course Project)</h4>
@@ -171,7 +167,7 @@
     </div>
 
     <div class="project">
-        <h3> <img id="project-img" src="img/godot-game-engine-icon.png" alt=" "/> Godot RPG Game</h3>
+        <h3> <img id="project-img" src="img/misc/godot-game-engine-icon.png" alt=" "/> Godot RPG Game</h3>
         <h4>May 2023</h4>
         <h4>Godot Game Engine / GDScript (Personal Project)</h4>
         <ul>
@@ -195,7 +191,8 @@
     </div>
 
     <div id="egg-container">
-        <a href="" id="egg"> <img id="egg" src="img/egg.png" alt="Easter Egg"> </a>
+        <!-- <a href="" id="egg"> <img id="egg" src="img/misc/egg.png" alt="Easter Egg"> </a> -->
+        <a href="#" id="egg-link"><img id="egg" src="img/misc/egg.png" alt="Easter Egg"></a>
         
     </div>
 
@@ -256,6 +253,27 @@
     });
 });
     </script>
-</body>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("egg-link").addEventListener("click", function(event) {
+                event.preventDefault(); // Prevent default anchor behavior
+
+                const screenWidth = window.innerWidth || document.documentElement.clientWidth || screen.width;
+                const screenHeight = window.innerHeight || document.documentElement.clientHeight || screen.height;
+                const width = Math.floor(screenWidth * 0.5);
+                const height = Math.floor(screenHeight * 0.5);
+                const left = Math.floor((screenWidth - width) / 2);
+                const top = Math.floor((screenHeight - height) / 2);
+            
+                const popupWindow = window.open("gallery.html", "popup", `width=${width},height=${height},top=${top},left=${left}`);
+                
+                popupWindow.addEventListener('beforeunload', function() {
+                    console.log('Popup closed');
+                });
+            });
+        });
+    </script>
+
+</body>
 </html>

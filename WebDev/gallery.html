@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easter Egg</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e8f3ea;
+            color: #4d8a66;
+            padding: 20px;
+            margin: 0;
+        }
+        h1 {
+            font-size: 24px;
+            text-align: center;
+        }
+        #gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        #gallery img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            cursor: pointer;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            transition: 'border-color 0.3s ease';
+        }
+        #gallery img:hover {
+            border-color: #4d8a66;
+        }
+        #enlargedImageContainer {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #enlargedImage {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        button {
+            display: block;
+            margin: 20px auto 0 auto;
+            background-color: #4d8a66;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #355e44;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Gallery</h1>
+    <div id="gallery">
+        <img src="img/gallery/grandcanyon.jpeg" alt="Sample Image 1" onclick="enlargeImage(this.src)">
+        <img src="img/gallery/rascal.jpg" alt="Sample Image 2" onclick="enlargeImage(this.src)">
+        <img src="img/gallery/river.png" alt="Sample Image 3" onclick="enlargeImage(this.src)">
+    </div>
+    <div id="enlargedImageContainer">
+        <img id="enlargedImage" src="img/gallery/rascal.jpg" alt="Enlarged Image">
+    </div>
+    <button onclick="window.close();">Close</button>
+    <script>
+        function enlargeImage(src) {
+            const img = document.getElementById('enlargedImage');
+            img.src = src;
+            img.onload = function() {
+                const aspectRatio = this.naturalWidth / this.naturalHeight;
+                if (this.naturalWidth > this.naturalHeight) {
+                    if (this.naturalWidth > 512) {
+                        this.style.width = '512px';
+                        this.style.height = 'auto';
+                    } else {
+                        this.style.width = this.naturalWidth + 'px';
+                        this.style.height = 'auto';
+                    }
+                } else {
+                    if (this.naturalHeight > 512) {
+                        this.style.height = '512px';
+                        this.style.width = 'auto';
+                    } else {
+                        this.style.height = this.naturalHeight + 'px';
+                        this.style.width = 'auto';
+                    }
+                }
+            };
+        }
+    </script>
+</body>
+</html>
