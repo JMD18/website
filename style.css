@@ -31,25 +31,29 @@ header {
 
 nav {
     display: flex;
+    position: relative;
     justify-content: flex-end;
     margin-top: 0.3%; /* Fixed size in px */
     margin-bottom: 0.3%; /* Fixed size in px */
     max-height: 4vh;
     min-height: 4vh;
+    /* padding-bottom: 5px; */
     /* border: 1px solid red; */
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    padding: 5px;
-    margin: 5px 5px; /* Fixed size in px */
-    font-size: 12pt; /* Fixed font size */
+    position: relative;
+    margin: 0 1%; /* Fixed margin */
+    padding: 8px;
+    font-size: 1.0rem; /* Fixed font size */
     max-height: 3vh;
-    min-height: 3vh;
-    /* line-height: 24px; Ensure consistent spacing */
-    border-radius: 5px;
+    max-width: auto;
+    line-height: 24px;
     /* border: 1px solid cyan; */
+    /* margin-top: 3px; */
+    /* margin-bottom: 3px; */
 }
 
 
@@ -160,8 +164,8 @@ ul li::before {
 footer {
     background-color: #4d8a66;
     color: #fff;
-    text-align: center;
-    padding: 1vh 2vw;
+    /* text-align: center; */
+    /* padding: 1vh 2vw; */
     bottom: 0;
     width: 100vw;
     max-height: 5vh;
@@ -189,9 +193,6 @@ footer {
 footer a {
     color: #fff;
     text-decoration: none;
-    /* font-weight: bold; */
-    /* font-size: 1.5vw; Keep font size constant */
-    /* padding: 5px; */
 }
 
 
@@ -248,12 +249,13 @@ footer a {
     nav {
         display: flex;
         justify-content: center;
-        margin-top: 0px; /* Remove top margin */
-        margin-bottom: 0px; /* Remove bottom margin */
+        /* border: 1px solid red; */
+        padding-left: 2vw;
+        padding-right: 2vw;
     }
 
     nav a {
-        margin: 0px 0; /* Add margin to separate the links */
+        margin: 0px 0.5%; /* Add margin to separate the links */
         font-size: 0.8em; /* Adjust font size for mobile */
     }
 
@@ -269,11 +271,22 @@ footer a {
         max-width: 90vw; /* Make content take up more width on mobile */
         padding: 10px;
         height: auto; /* Allow height to adjust based on content */
+        font-size: 0.8em; /* Adjust font size for mobile */
     }
 
-    h1, h2, h3, h4 {
+    h1, h2 {
         font-size: 1.2em; /* Adjust heading font size for mobile */
+        margin-bottom: 10px;
+    }
+
+    h3, h4 {
+        font-size: 1em; /* Adjust heading font size for mobile */
         margin-bottom: 8px;
+    }
+
+    #project-img {
+        width: 20px; /* Adjust image size for mobile */
+        height: 20px; /* Adjust image size for mobile */
     }
 
     #socials a {
@@ -283,10 +296,22 @@ footer a {
     }
 
     footer {
-        /* padding: 8px; Reduce padding in footer */
+        /* padding: 8px; */
         font-size: 0.8em;
         display: flex;
         justify-content: center;
+        align-items: center;
+        text-align: center;
+        /* padding-right: 5vw; */
+    }
+
+    footer a {
+        font-size: 1em; /* Adjust font size for mobile */
+    
+    }
+
+    footer p {
+        font-size: 1em; /* Adjust font size for mobile */
     }
 
     #projects ul {
