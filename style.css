@@ -140,6 +140,11 @@ h4 {
     margin-bottom: 5px;
 }
 
+h3 a {
+    color: #4d8a66;
+    text-decoration: none;
+}
+
 ul {
     list-style-type: none;
     padding: 0;
@@ -257,6 +262,8 @@ footer a {
     nav a {
         margin: 0px 0.5%; /* Add margin to separate the links */
         font-size: 0.8em; /* Adjust font size for mobile */
+        /* border: 1px solid red; */
+        text-align: center;
     }
 
     #container {
