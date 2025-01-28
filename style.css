@@ -81,7 +81,7 @@ nav a:hover {
     min-height: auto;
     margin: 0 auto;
     background-color: #fff;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1); */
     height: 100vh - 80px; /* Adjust container height according to viewport height and header/footer height */
     /* border: 1px solid red; */
 }
@@ -272,7 +272,7 @@ footer a {
         padding: 10px;
         height: auto; /* Allow height to adjust based on content */
         font-size: 0.8em; /* Adjust font size for mobile */
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+        /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); */
     }
 
     h1, h2 {
