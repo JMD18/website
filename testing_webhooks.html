@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webhook Data Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .webhook-data {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .json-output {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .footer {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Webhook Data Display</h1>
+    </header>
+
+    <div class="container">
+        <h2>Received Webhook Data</h2>
+        <div id="webhook-data" class="json-output">
+            Waiting for webhook data...
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Webhook Listener - Powered by JavaScript</p>
+    </div>
+
+    <script>
+        // Function to simulate receiving webhook data (replace this with real data from your backend)
+        function fetchWebhookData() {
+            // Simulate data that could come from your backend (like from an API)
+            const webhookData = {
+                event: "new_data_received",
+                data: {
+                    value: "example_value",
+                    timestamp: "2025-01-28T12:34:56Z"
+                }
+            };
+
+            // Update the page with the webhook data
+            const outputElement = document.getElementById('webhook-data');
+            outputElement.textContent = JSON.stringify(webhookData, null, 2);
+        }
+
+        // Call fetchWebhookData when the page loads to simulate the first webhook
+        window.onload = fetchWebhookData;
+
+        // If using real-time updates, use setInterval to refresh data every few seconds
+        setInterval(fetchWebhookData, 10000); // Refresh every 10 seconds (for example)
+    </script>
+</body>
+</html>
