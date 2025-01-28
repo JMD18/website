@@ -7,7 +7,6 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Prevent horizontal scrolling */
-    
 }
 
 body::-webkit-scrollbar {
@@ -19,29 +18,40 @@ body::-webkit-scrollbar {
 header {
     background-color: #4d8a66;
     color: #fff;
-    max-height: 8vh; /* Adjust header height */
-    padding: 10px;
+    max-height: 5vh; /* Use vh instead of px for height */
+    min-height: 5vh; /* Use vh instead of px for height */
+    /* padding: 1vh 2vw; Adjust padding using viewport units */
     text-align: center;
-    position: fixed; /* Fixed position to stick to the top */
-    top: 0; /* Stick to the top */
-    width: 100%; /* Ensure header stretches across the viewport */
-    z-index: 999; /* Ensure header is above other content */
+    position: fixed;
+    top: 0;
+    width: 100vw; /* Ensure the header takes the full width of the viewport */
+    z-index: 999;
 }
+
 
 nav {
     display: flex;
     justify-content: flex-end;
-    margin-top: 0.3%;
-    margin-bottom: 0.3%;
-    margin-right: 1%;
+    margin-top: 0.3%; /* Fixed size in px */
+    margin-bottom: 0.3%; /* Fixed size in px */
+    max-height: 4vh;
+    min-height: 4vh;
+    /* border: 1px solid red; */
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    margin: 0 10px;
-    padding: 8px;
+    padding: 5px;
+    margin: 5px 5px; /* Fixed size in px */
+    font-size: 12pt; /* Fixed font size */
+    max-height: 3vh;
+    min-height: 3vh;
+    /* line-height: 24px; Ensure consistent spacing */
+    border-radius: 5px;
+    /* border: 1px solid cyan; */
 }
+
 
 nav a:hover {
     background-color: #355e44;
@@ -49,16 +59,29 @@ nav a:hover {
 }
 
 #container {
-    max-width: 75vw;
+    max-width: 65vw;
+    min-height: auto;
     margin: 0 auto;
     background-color: #fff;
     padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     margin-top: 10vh; /* Adjust according to the height of the header */
     margin-bottom: 10vh;
-    height: 100vh - 80px; /* Adjust container height according to viewport height and header/footer height */
+    height: 100vh - 100px; /* Adjust container height according to viewport height and header/footer height */
+    /* border: 1px solid red; */
 }
+
+#main_middle {
+    max-width: 65vw;
+    min-height: auto;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    height: 100vh - 80px; /* Adjust container height according to viewport height and header/footer height */
+    /* border: 1px solid red; */
+}
+
 
 /* Add a bottom border to ul elements */
 #projects ul {
@@ -138,14 +161,39 @@ footer {
     background-color: #4d8a66;
     color: #fff;
     text-align: center;
-    padding: 10px;
+    padding: 1vh 2vw;
     bottom: 0;
-    width: 100%;
-    position: fixed; /* Fixed position to stick to the bottom */
+    width: 100vw;
+    max-height: 5vh;
+    min-height: 5vh;
+    position: fixed;
     font-weight: bold;
-    z-index: 999; /* Ensure footer is above other content */
-
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/* footer p {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1rem;
+    margin: 0;
+    display: flex;
+} */
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    /* font-weight: bold; */
+    /* font-size: 1.5vw; Keep font size constant */
+    /* padding: 5px; */
+}
+
 
 #socials a i {
     margin-right: 5px; /* Adjust the margin as needed */
@@ -177,8 +225,72 @@ footer {
 }
 
 #egg {
-    width: 10px;
+    width: 20px;
     height: auto;
     display: inline;
+    /* border: 1px solid red; */
+    /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); */
+
 }
 
+
+/* MOBILE VIEW */
+@media only screen and (max-width: 768px) {
+    header {
+        /* padding: 5px 5px; Smaller padding for mobile */
+        max-height: 5vh; /* Increase height for mobile */
+        min-height: 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        margin-top: 0px; /* Remove top margin */
+        margin-bottom: 0px; /* Remove bottom margin */
+    }
+
+    nav a {
+        margin: 0px 0; /* Add margin to separate the links */
+        font-size: 0.8em; /* Adjust font size for mobile */
+    }
+
+    #container {
+        max-width: 90vw; /* Make content take up more width on mobile */
+        padding: 15px;
+        margin-top: 8vh; /* Slightly larger top margin to account for header */
+        margin-bottom: 8vh;
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    #main_middle {
+        max-width: 90vw; /* Make content take up more width on mobile */
+        padding: 10px;
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    h1, h2, h3, h4 {
+        font-size: 1.2em; /* Adjust heading font size for mobile */
+        margin-bottom: 8px;
+    }
+
+    #socials a {
+        font-size: 0.8em; /* Adjust size for social links */
+        padding: 5px 5px;
+        display: inline;
+    }
+
+    footer {
+        /* padding: 8px; Reduce padding in footer */
+        font-size: 0.8em;
+        display: flex;
+        justify-content: center;
+    }
+
+    #projects ul {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+}
