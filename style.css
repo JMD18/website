@@ -90,18 +90,18 @@ nav a:hover {
 }
 
 #experience h3 {
-    border-top: 1px solid #ccc;
+    /* border-top: 1px solid #ccc; */
     padding-top: 20px; /* Optional: Add some padding to space out the borders */
 }
 
 #education h3 {
-    border-top: 1px solid #ccc;
+    /* border-top: 1px solid #ccc; */
     padding-top: 20px; /* Optional: Add some padding to space out the borders */
 }
 
 /* Add a bottom border to ul elements */
 #projects h3 {
-    border-top: 1px solid #ccc;
+    /* border-top: 1px solid #ccc; */
     padding-top: 20px; /* Optional: Add some padding to space out the borders */
     margin-bottom: 20px; /* Optional: Add margin to space out the projects */
      /* Optional: Add margin to space out the projects */
