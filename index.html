@@ -60,13 +60,12 @@
         <h3>    Lead Python Developer, Celestia Diagnostics - Birmingham, AL </h3>
             <ul>
                 <li>    Design and create our full-scale (in-production) image acquisition and analysis pipeline     </li>
-                <li>    Create GUI application utilizing CustomTKinter library to be used at our lab and physician's clinics     </li>
+                <li>    Create GUI application utilizing CustomTKinter library being used at our lab and physician's clinics     </li>
                 <li>    Enhance image viewing and data analysis via a custom Napari application.       </li>
                 <li>    Develop and maintain ad hoc repositories totaling ~8000 LOC for use throughout our company    </li>
                 <li>    Build an integrated data system between Celestia, MedHelp Clinics, and Micro-Vascular Research Foundation    </li>
                 <li>    Ensure HIPAA protection of patient/subject data, in both storage and transit, through encryption protocols</li>
                 <li>    Write, test, and analyze ML algorithms/implementations for aggregate classification using Omnipose.</li>
-
             </ul>
 
         <h3>    Graduate Teaching Assistant: Probability & Statistics, University of Alabama at Birmingham   </h3>
@@ -117,8 +116,23 @@
                     <li>    CS GPA: 4.0 / 4.0, Overall GPA: 3.79 </li>
                     <li>    Courses: Advanced Algorithms, Programming Languages, Automata Theory, Formal Languages, Database Systems, Computer Security, Software Engineering, Object Oriented Programming, Systems Programming</li>
                 </ul>
+            
+            <div class="pdf-wrapper">
+                <h4>    Research Papers    </h4>
+                <div class="pdf-container">
+                    <h4><a href="img/misc/DL_WGAN_Paper.pdf" target="_blank">Analyzing Wasserstein Generative Adversarial Networks with Gradient Penalties</a></h4>
+                    <a href="img/misc/DL_WGAN_Paper.pdf" target="_blank">
+                        <img src="img/misc/DL_WGAN_Paper-first_page.jpg" class="pdf-thumbnail" alt="Analyzing Wasserstein Generative Adversarial Networks with Gradient Penalties">
+                    </a>
+                </div>
 
-
+                <div class="pdf-container">
+                    <h4><a href="img/misc/waves_to_pixels_revised.pdf" target="_blank">Waves to Pixels: A Study of Neural Networks in Relation to Audio Encoding for Classification and Diagnosis</a></h4>
+                    <a href="img/misc/waves_to_pixels_revised.pdf" target="_blank">
+                        <img src="img/misc/waves_to_pixels_first_page.jpg" class="pdf-thumbnail" alt="Waves to Pixels: A Study of Neural Networks in Relation to Audio Encoding for Classification and Diagnosis">
+                    </a>
+                </div>
+            </div>
     </section>
 
 
@@ -272,6 +286,18 @@
                 
                 popupWindow.addEventListener('beforeunload', function() {
                     console.log('Popup closed');
+                });
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Ensure the PDF links open in a new window
+            const pdfLinks = document.querySelectorAll('.pdf-container a');
+            pdfLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    window.open(link.href, '_blank');
                 });
             });
         });
