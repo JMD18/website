@@ -251,6 +251,70 @@ footer a {
 
 }
 
+/* New container for side-by-side PDFs */
+.pdf-wrapper {
+    display: flex;
+    justify-content: space-between;  /* Evenly distributes space between the PDFs */
+    gap: 20px;                       /* Adds a 20px gap between the two PDF containers */
+    /* margin-top: 20px;                Adjust as needed */
+    flex-wrap: wrap;                 /* Allows items to wrap in case of small screens */
+    border-top: #cccccc 2px solid;    /* Adds a border above the PDFs */
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Update PDF container styling */
+.pdf-container {
+    flex: 1;             /* Allows each container to grow equally */
+    max-width: 45%;      /* Limits the width; adjust if needed */
+    min-width: 250px;    /* Ensures that the container doesn't shrink too much */
+    text-align: center;
+    position: relative;  /* Allows stacking of image and title */
+}
+
+/* Thumbnails for PDFs */
+.pdf-thumbnail {
+    width: 100%;         /* Ensure thumbnail image takes up full width of its container */
+    height: auto;        /* Maintain aspect ratio */
+    border-radius: 5px;  /* Optional: Gives thumbnails a rounded corner */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);  /* Optional: Adds shadow to thumbnails */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth hover effect */
+    z-index: 1;          /* Ensures image stays behind the text */
+}
+
+/* Thumbnail hover effect */
+.pdf-thumbnail:hover {
+    transform: scale(1.05);  /* Slightly increases size on hover */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);  /* Slightly stronger shadow on hover */
+    z-index: 2;          /* Brings image to the front when hovered */
+}
+
+.pdf-wrapper h4 {
+    text-align: left; /* Centers the header text */
+    width: 100%;        /* Ensures the header takes up the full width of its container */
+    margin: 0 auto;     /* Centers the element horizontally */
+    font-size: 1.5rem;  /* Adjust font size if needed */
+    color: #4d8a66;     /* Use your header color */
+}
+
+
+/* Update PDF container text and links */
+.pdf-container h4 {
+    font-size: 1rem;
+    color: #4d8a66;
+    margin-bottom: 20px;
+    position: relative;  /* Allows stacking of image and title */
+    z-index: 2;          /* Ensures title stays above the thumbnail */
+}
+
+.pdf-container h4 a {
+    text-decoration: none;
+    color: #4d8a66;
+}
+
+.pdf-container h4 a:hover {
+    text-decoration: underline;
+}
 
 /* MOBILE VIEW */
 @media only screen and (max-width: 768px) {
@@ -337,5 +401,9 @@ footer a {
     #projects ul {
         margin-bottom: 10px;
         padding-bottom: 10px;
+    }
+
+    .pdf-wrapper {
+        flex-direction: column;  /* Stacks the PDFs vertically on smaller screens */
     }
 }
