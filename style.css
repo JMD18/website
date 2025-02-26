@@ -405,5 +405,16 @@ footer a {
 
     .pdf-wrapper {
         flex-direction: column;  /* Stacks the PDFs vertically on smaller screens */
+        gap: 10px;               /* Adjusts gap for better spacing */
+    }
+
+    .pdf-container {
+        max-width: 100%;         /* Full width for each container on small screens */
+        min-width: auto;         /* Allow to stretch as needed */
+    }
+
+    .pdf-thumbnail {
+        width: 80%;             /* Adjust size of thumbnail for mobile */
+        margin: 0 auto;         /* Centers the thumbnail */
     }
 }
