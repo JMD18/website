@@ -317,7 +317,7 @@ footer a {
 }
 
 /* MOBILE VIEW */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
     header {
         /* padding: 5px 5px; Smaller padding for mobile */
         max-height: 5vh; /* Increase height for mobile */
@@ -411,10 +411,12 @@ footer a {
     .pdf-container {
         max-width: 100%;         /* Full width for each container on small screens */
         min-width: auto;         /* Allow to stretch as needed */
+        margin-bottom: 20px;     /* Adds space between PDF containers */
+        margin-top: 10px;
     }
 
     .pdf-thumbnail {
-        width: 80%;             /* Adjust size of thumbnail for mobile */
+        width: 100%;             /* Adjust size of thumbnail for mobile */
         margin: 0 auto;         /* Centers the thumbnail */
     }
 }
