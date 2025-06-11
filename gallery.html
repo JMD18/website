@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/misc/jmd_square.png">
+    <title>Easter Egg</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e8f3ea;
+            color: #4d8a66;
+            padding: 20px;
+            margin: 0;
+        }
+        h1 {
+            font-size: 24px;
+            text-align: center;
+        }
+        #gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        #gallery img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            cursor: pointer;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            transition: border-color 0.3s ease;
+        }
+        #gallery img:hover {
+            border-color: #4d8a66;
+        }
+        #gallery img.selected {
+            border-color: #4d8a66;
+            border-width: 3px;
+        }
+        #enlargedImageContainer {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #enlargedImage {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+        #caption {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #4d8a66;
+        }
+        button {
+            display: block;
+            margin: 20px auto 0 auto;
+            background-color: #4d8a66;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #355e44;
+        }
+    </style>
+</head>
+<body>
+    <h3>A little insight into my life...</h3>
+    <div id="gallery"></div>
+    <div id="enlargedImageContainer">
+        <img id="enlargedImage" src="img/gallery/CGI.jpg" alt="Enlarged Image">
+        <div id="caption"></div> <!-- Container for caption -->
+    </div>
+    <button onclick="window.close();">Close</button>
+
+    <script>
+        function enlargeImage(src, caption) {
+            const img = document.getElementById('enlargedImage');
+            img.src = src;
+            img.alt = caption;
+            img.onload = function() {
+                const aspectRatio = this.naturalWidth / this.naturalHeight;
+                if (this.naturalWidth > this.naturalHeight) {
+                    if (this.naturalWidth > 512) {
+                        this.style.width = '512px';
+                        this.style.height = 'auto';
+                    } else {
+                        this.style.width = this.naturalWidth + 'px';
+                        this.style.height = 'auto';
+                    }
+                } else {
+                    if (this.naturalHeight > 512) {
+                        this.style.height = '512px';
+                        this.style.width = 'auto';
+                    } else {
+                        this.style.height = this.naturalHeight + 'px';
+                        this.style.width = 'auto';
+                    }
+                }
+            };
+
+            // Set the caption text
+            const captionContainer = document.getElementById('caption');
+            captionContainer.textContent = caption;
+        }
+
+        // Dynamic image generation
+        const imageNames = ['akshar_grad.jpg',
+                            'antelope_island.jpg',
+                            'CGI.jpg', 'coal1.jpg',
+                            'coal2.jpg', 'coal_green.jpg',
+                            'DTF.jpg', 'grandcanyon.jpeg',
+                            'jill.jpg', 'jiufen.jpg', 'river.png',
+                            'SF.jpg', 'snorkel.jpg', 'snow_river.jpg',
+                            'spaceify.jpg', 'st.jpg', 'vic.jpg']; // Add all your image filenames here
+
+        const captions = [
+            'Undergraduate Graduation w/ Akshar',
+            'Antelope Island',
+            'CGI Runner-Up Group (Jay, Mitchell, Jayden, and I)',
+            'Mr. Charcoal',
+            'Charcoal again :D',
+            'Such a lovely green',
+            '鼎泰豐 (Din Tai Fung) in Taipei', 
+            'Visit to the Grand Canyon',
+            "Jillian's (sister) graduation!",
+            '九份 (Jiufen) Old Street, Taiwan',
+            'River selfie near Vail, Colorado',
+            'San Francisco w/ ',
+            'Snorkeling in Hawaii',
+            'Candid river photo',
+            'Drafting Spaceify, another of our hackathon projects',
+            'Jay and I at SlossTECH in Birmingham, AL (2024)',
+            'Victoria and I celebrating my birthday from a rooftop bar in Bham'
+        ];
+
+        const galleryDiv = document.getElementById('gallery');
+
+        imageNames.forEach((imageName, index) => {
+            const img = document.createElement('img');
+            img.src = `img/gallery/${imageName}`;
+            img.alt = imageName.split('.')[0]; // Use filename as alt text
+
+            img.onclick = function() {
+                // Remove 'selected' class from all images
+                document.querySelectorAll('#gallery img').forEach(image => {
+                    image.classList.remove('selected');
+                });
+                // Add 'selected' class to the clicked image
+                this.classList.add('selected');
+                enlargeImage(this.src, captions[index]);
+            };
+
+            const figure = document.createElement('figure');
+            figure.appendChild(img);
+            galleryDiv.appendChild(figure);
+        });
+    </script>
+</body>
+</html>

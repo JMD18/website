@@ -1,0 +1,434 @@
+/* style.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e8f3ea;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+
+}
+
+header {
+    background-color: #4d8a66;
+    color: #fff;
+    max-height: 5vh; /* Use vh instead of px for height */
+    min-height: 5vh; /* Use vh instead of px for height */
+    /* padding: 1vh 2vw; Adjust padding using viewport units */
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100vw; /* Ensure the header takes the full width of the viewport */
+    z-index: 999;
+}
+
+
+nav {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    margin-top: 0.3%; /* Fixed size in px */
+    margin-bottom: 0.3%; /* Fixed size in px */
+    max-height: 4vh;
+    min-height: 4vh;
+    /* padding-bottom: 5px; */
+    /* border: 1px solid red; */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    margin: 0 1%; /* Fixed margin */
+    padding: 8px;
+    font-size: 1.0rem; /* Fixed font size */
+    max-height: 3vh;
+    max-width: auto;
+    line-height: 24px;
+    /* border: 1px solid cyan; */
+    /* margin-top: 3px; */
+    /* margin-bottom: 3px; */
+}
+
+
+nav a:hover {
+    background-color: #355e44;
+    border-radius: 5px;
+}
+
+#home {
+    text-align: center;}
+
+#container {
+    max-width: 65vw;
+    min-height: auto;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    margin-top: 10vh; /* Adjust according to the height of the header */
+    margin-bottom: 10vh;
+    height: 100vh - 100px; /* Adjust container height according to viewport height and header/footer height */
+    /* border: 1px solid red; */
+}
+
+#main_middle {
+    max-width: 65vw;
+    min-height: auto;
+    margin: 0 auto;
+    background-color: #fff;
+    /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1); */
+    height: 100vh - 80px; /* Adjust container height according to viewport height and header/footer height */
+    /* border: 1px solid red; */
+}
+
+#experience h3 {
+    /* border-top: 1px solid #ccc; */
+    padding-top: 20px; /* Optional: Add some padding to space out the borders */
+}
+
+#education h3 {
+    /* border-top: 1px solid #ccc; */
+    padding-top: 20px; /* Optional: Add some padding to space out the borders */
+}
+
+/* Add a bottom border to ul elements */
+#projects h3 {
+    /* border-top: 1px solid #ccc; */
+    padding-top: 20px; /* Optional: Add some padding to space out the borders */
+    margin-bottom: 20px; /* Optional: Add margin to space out the projects */
+     /* Optional: Add margin to space out the projects */
+}
+
+
+#socials_wrapper {
+    background-color: #e8f3ea;
+    padding: 10px;
+    /* margin-top: 10px; */
+    /* border: 1px solid red; */
+    text-align: center;
+
+}
+
+#socials {
+    display: inline-block;
+    /* border: 1px solid red; */
+}
+
+#socials a {
+    color: #4d8a66;
+    text-decoration: none;
+    background-color: #e8f3ea;
+    margin: 0 10px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold ;
+    width: 90%;
+    
+}
+
+#main_middle {
+    margin-top: 20px;
+}
+
+section {
+    margin-bottom: 10px;
+    border-bottom: 2px solid #4d8a66;
+    padding-bottom: 10px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #4d8a66;
+    margin-bottom: 5px;
+}
+
+h3 a {
+    color: #4d8a66;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li::before {
+    content: '\2022'; /* Unicode character for bullet (•) */
+    color: #4d8a66; /* Bullet color */
+    font-size: 1.2em; /* Adjust the font size if needed */
+    margin-right: 8px; /* Adjust spacing between bullet and text */
+}
+
+/* Bold specific words in the Skills section */
+#skills p {
+    font-weight: normal; /* Reset font-weight for paragraph */
+}
+
+#skills p strong {
+    font-weight: bold;
+}
+
+footer {
+    background-color: #4d8a66;
+    color: #fff;
+    /* text-align: center; */
+    /* padding: 1vh 2vw; */
+    bottom: 0;
+    width: 100vw;
+    max-height: 5vh;
+    min-height: 5vh;
+    position: fixed;
+    font-weight: bold;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* footer p {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1rem;
+    margin: 0;
+    display: flex;
+} */
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+#socials a i {
+    margin-right: 5px; /* Adjust the margin as needed */
+}
+
+
+#email-link {
+    color: #FFF; /* Set the color to your desired value */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#email-link:hover {
+    text-decoration: underline;
+}
+
+#project-img {
+    width: 30px;
+    height: 30px;
+    display: inline;
+    vertical-align: bottom;
+    color: #4d8a66;
+}
+
+#egg-container {
+    text-align: right;
+    /* border: 1px solid red; */
+    float: right;
+}
+
+#egg {
+    width: 20px;
+    height: auto;
+    display: inline;
+    /* border: 1px solid red; */
+    /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); */
+
+}
+
+/* New container for side-by-side PDFs */
+.pdf-wrapper {
+    display: flex;
+    justify-content: space-between;  /* Evenly distributes space between the PDFs */
+    gap: 20px;                       /* Adds a 20px gap between the two PDF containers */
+    /* margin-top: 20px;                Adjust as needed */
+    flex-wrap: wrap;                 /* Allows items to wrap in case of small screens */
+    border-top: #cccccc 2px solid;    /* Adds a border above the PDFs */
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Update PDF container styling */
+.pdf-container {
+    flex: 1;             /* Allows each container to grow equally */
+    max-width: 45%;      /* Limits the width; adjust if needed */
+    min-width: 250px;    /* Ensures that the container doesn't shrink too much */
+    text-align: center;
+    position: relative;  /* Allows stacking of image and title */
+}
+
+/* Thumbnails for PDFs */
+.pdf-thumbnail {
+    width: 100%;         /* Ensure thumbnail image takes up full width of its container */
+    height: auto;        /* Maintain aspect ratio */
+    border-radius: 5px;  /* Optional: Gives thumbnails a rounded corner */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);  /* Optional: Adds shadow to thumbnails */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth hover effect */
+    z-index: 1;          /* Ensures image stays behind the text */
+}
+
+/* Thumbnail hover effect */
+.pdf-thumbnail:hover {
+    transform: scale(1.05);  /* Slightly increases size on hover */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);  /* Slightly stronger shadow on hover */
+    z-index: 2;          /* Brings image to the front when hovered */
+}
+
+.pdf-wrapper h4 {
+    text-align: left; /* Centers the header text */
+    width: 100%;        /* Ensures the header takes up the full width of its container */
+    margin: 0 auto;     /* Centers the element horizontally */
+    font-size: 1.5rem;  /* Adjust font size if needed */
+    color: #4d8a66;     /* Use your header color */
+}
+
+
+/* Update PDF container text and links */
+.pdf-container h4 {
+    font-size: 1rem;
+    color: #4d8a66;
+    margin-bottom: 20px;
+    position: relative;  /* Allows stacking of image and title */
+    z-index: 2;          /* Ensures title stays above the thumbnail */
+}
+
+.pdf-container h4 a {
+    text-decoration: none;
+    color: #4d8a66;
+}
+
+.pdf-container h4 a:hover {
+    text-decoration: underline;
+}
+
+/* MOBILE VIEW */
+@media only screen and (max-width: 800px) {
+    header {
+        /* padding: 5px 5px; Smaller padding for mobile */
+        max-height: 5vh; /* Increase height for mobile */
+        min-height: 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        /* border: 1px solid red; */
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+
+    nav a {
+        margin: 0px 0.5%; /* Add margin to separate the links */
+        font-size: 0.8em; /* Adjust font size for mobile */
+        /* border: 1px solid red; */
+        text-align: center;
+    }
+
+    #container {
+        max-width: 90vw; /* Make content take up more width on mobile */
+        padding: 15px;
+        margin-top: 8vh; /* Slightly larger top margin to account for header */
+        margin-bottom: 8vh;
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    #main_middle {
+        max-width: 90vw; /* Make content take up more width on mobile */
+        padding: 10px;
+        height: auto; /* Allow height to adjust based on content */
+        font-size: 0.8em; /* Adjust font size for mobile */
+        /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); */
+    }
+
+    h1, h2 {
+        font-size: 1.2em; /* Adjust heading font size for mobile */
+        margin-bottom: 10px;
+    }
+
+    h3, h4 {
+        font-size: 1em; /* Adjust heading font size for mobile */
+        margin-bottom: 8px;
+    }
+
+    #project-img {
+        width: 20px; /* Adjust image size for mobile */
+        height: 20px; /* Adjust image size for mobile */
+    }
+
+    #socials a {
+        font-size: 0.8em; /* Adjust size for social links */
+        padding: 5px 5px;
+        display: inline;
+    }
+
+    footer {
+        /* padding: 8px; */
+        font-size: 0.8em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        /* padding-right: 5vw; */
+    }
+
+    footer a {
+        font-size: 1em; /* Adjust font size for mobile */
+    
+    }
+
+    footer p {
+        font-size: 1em; /* Adjust font size for mobile */
+    }
+
+    #projects ul {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+
+    .pdf-wrapper {
+        flex-direction: column;  /* Stacks the PDFs vertically on smaller screens */
+        gap: 10px;               /* Adjusts gap for better spacing */
+    }
+
+    .pdf-container {
+        max-width: 100%;         /* Full width for each container on small screens */
+        min-width: auto;         /* Allow to stretch as needed */
+        margin-bottom: 20px;     /* Adds space between PDF containers */
+        margin-top: 10px;
+    }
+    
+    .pdf-container h4 {
+        font-size: 1rem;
+        color: #4d8a66;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 2;
+        height: 3em; /* Set fixed height to normalize layout */
+        overflow: hidden; /* Optional: truncate long titles */
+        text-overflow: ellipsis;
+    }
+    
+
+    .pdf-thumbnail {
+        width: 100%;             /* Adjust size of thumbnail for mobile */
+        margin: 0 auto;         /* Centers the thumbnail */
+    }
+}
