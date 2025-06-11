@@ -220,6 +220,31 @@
 	<footer>
         <p>&copy; 2025 Joshua Daugherty | All rights reserved | <a id=email-link href=mailto:joshmd00@gmail.com target="_blank"> Contact me!</a></p>
     </footer>
+    
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("download-link").addEventListener("click", function(event) {
+                event.preventDefault(); // Prevent the default action of following the link
+    
+                // Create a new anchor element
+                var downloadAnchor = document.createElement("a");
+    
+                // Set its attributes
+                downloadAnchor.href = "spring_2025_res.pdf"; // Replace with the actual file path
+                downloadAnchor.download = "spring_2025_res.pdf"; // Set the download attribute to prompt the download with the specified filename
+    
+                // Append it to the body and click it programmatically
+                document.body.appendChild(downloadAnchor);
+                downloadAnchor.click();
+    
+                // Remove the anchor element from the DOM
+                document.body.removeChild(downloadAnchor);
+            });
+        });
+    </script>
+    
 
 
 
