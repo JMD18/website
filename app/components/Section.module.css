@@ -570,7 +570,7 @@ section:nth-of-type(5) {
   
   .experience ul {
     width: 100%;
-    margin-left: 0;
+    margin: 0.5rem 0 0 0;
     padding-left: 20px;
   }
   
@@ -587,7 +587,7 @@ section:nth-of-type(5) {
   
   .experience ul {
     width: 100%;
-    margin-left: 0;
+    margin: 0.5rem 0 0 0;
     padding-left: 15px;
   }
 }
