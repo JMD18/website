@@ -51,6 +51,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   opacity: 1;
   mix-blend-mode: normal;
+  z-index: 2;
 }
 
 /* Mobile-responsive gallery */
@@ -94,6 +95,9 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   animation: imageZoomIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
   opacity: 1;
+  background-color: #fff;
+  mix-blend-mode: normal;
+  display: block;
 }
 
 @media (max-width: 768px) {
