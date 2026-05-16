@@ -85,6 +85,8 @@
 .enlargedImageContainer {
   text-align: center;
   margin: 20px 0;
+  position: relative;
+  z-index: 2;
 }
 
 .enlargedImage {
@@ -98,6 +100,8 @@
   background-color: #fff;
   mix-blend-mode: normal;
   display: block;
+  position: relative;
+  z-index: 2;
 }
 
 @media (max-width: 768px) {
