@@ -48,6 +48,38 @@
   overflow: hidden;
 }
 
+/* Mobile-responsive header */
+@media (max-width: 768px) {
+  .navLink {
+    margin: 0 0.5%;
+    padding: 6px;
+    font-size: 0.85rem;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    max-height: 6vh;
+    min-height: 6vh;
+  }
+  
+  .nav {
+    max-height: 5vh;
+    min-height: 5vh;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+  }
+  
+  .navLink {
+    margin: 0 0.3%;
+    padding: 5px;
+    font-size: 0.75rem;
+    line-height: 16px;
+    max-height: 2.5vh;
+  }
+}
+
 .navLink::before {
   content: '';
   position: absolute;

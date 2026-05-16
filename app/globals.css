@@ -98,6 +98,27 @@ a {
   text-decoration: none;
 }
 
+/* Mobile-responsive body and global styles */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
+  
+  body::before {
+    filter: blur(40px);
+  }
+}
+
 button {
   cursor: pointer;
   border: none;
