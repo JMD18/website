@@ -19,6 +19,7 @@ export function ExperienceSection() {
           <img src="/img/misc/KTOS.png" className={styles.projectIcon} alt="Kratos SRE" />
           <div>
             <h3 className={styles.experienceTitle}>Associate Software Engineer, Kratos SRE, Inc. – Birmingham, AL</h3>
+            <p className={styles.projectSubtitle}>Active Security Clearance: Secret</p>
             <ul>
               <li className={styles.listItem}>Nondestructive Solutions Development | UltraSpec</li>
             </ul>
