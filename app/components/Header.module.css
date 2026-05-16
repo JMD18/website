@@ -66,10 +66,13 @@
 /* Mobile-responsive header */
 @media (max-width: 768px) {
   .navLink {
-    margin: 0 0.5%;
-    padding: 6px;
+    flex: auto;
+    margin: 0 2px;
+    padding: 6px 4px;
     font-size: 0.85rem;
     line-height: 20px;
+    white-space: nowrap;
+    text-align: center;
   }
 }
 
@@ -87,11 +90,14 @@
   }
   
   .navLink {
-    margin: 0 0.3%;
-    padding: 5px;
+    flex: auto;
+    margin: 0 2px;
+    padding: 5px 3px;
     font-size: 0.75rem;
     line-height: 16px;
     max-height: 2.5vh;
+    white-space: nowrap;
+    text-align: center;
   }
 }
 
