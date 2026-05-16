@@ -33,6 +33,21 @@
   min-height: 4vh;
 }
 
+@media (max-width: 768px) {
+  .nav {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    max-height: auto;
+    min-height: auto;
+  }
+}
+
 .navLink {
   color: #fff;
   text-decoration: none;

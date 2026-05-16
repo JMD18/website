@@ -274,6 +274,29 @@ section:nth-of-type(5) {
   animation-fill-mode: both;
 }
 
+/* Mobile-responsive papers section */
+@media (max-width: 768px) {
+  .pdfGrid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .pdfContainer {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pdfGrid {
+    gap: 1rem;
+  }
+  
+  .pdfContainer {
+    padding: 10px;
+  }
+}
+
 #education .pdfGrid .pdfContainer:nth-child(1) {
   animation-delay: 0.5s;
 }
