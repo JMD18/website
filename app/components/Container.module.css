@@ -1,0 +1,18 @@
+.container {
+  max-width: 65vw;
+  min-height: auto;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+.mainMiddle {
+  max-width: 65vw;
+  min-height: auto;
+  margin: 0 auto;
+  background-color: #fff;
+}
