@@ -199,52 +199,76 @@ export function SkillsSection() {
         <div className={styles.skillsCarousel}>
           <div className={`${styles.skillsTrack} ${styles.programmingTrack}`}>            {/* original set */}
             <article className={styles.skillCard} title="Python">
-              <img src="/img/misc/carousel/python.png" alt="Python" />
+              <a href="https://python.org/" target="_blank" rel="noopener noreferrer">
+                <img src="/img/misc/carousel/python.png" alt="Python" className={styles.skillCardIcon} />
+              </a>
             </article>
 
             <article className={styles.skillCard} title="Java">
-              <img src="/img/misc/carousel/java.png" alt="Java" />
+              <a href="https://www.java.com/" target="_blank" rel="noopener noreferrer">
+                <img src="/img/misc/carousel/java.png" alt="Java" className={styles.skillCardIcon} />
+              </a>
             </article>
 
             <article className={styles.skillCard} title="LaTeX">
-              <img src="/img/misc/carousel/latex.png" alt="LaTeX" />
+              <a href="https://www.latex-project.org/" target="_blank" rel="noopener noreferrer">
+                <img src="/img/misc/carousel/latex.png" alt="LaTeX" className={styles.skillCardIcon} />
+              </a>
             </article>
 
             <article className={styles.skillCard} title="Bash">
-              <img src="/img/misc/carousel/bash.png" alt="Bash" />
+              <a href="https://www.gnu.org/software/bash/" target="_blank" rel="noopener noreferrer">
+                <img src="/img/misc/carousel/bash.png" alt="Bash" className={styles.skillCardIcon} />
+              </a>
             </article>
 
             <article className={styles.skillCard} title="C++">
-              <img src="/img/misc/carousel/cpp.png" alt="C++" />
+              <a href="https://isocpp.org/" target="_blank" rel="noopener noreferrer">
+                <img src="/img/misc/carousel/cpp.png" alt="C++" className={styles.skillCardIcon} />
+              </a>
             </article>
 
             <article className={styles.skillCard} title="Racket">
-              <img src="/img/misc/carousel/racket.png" alt="Racket" />
+              <a href="https://racket-lang.org/" target="_blank" rel="noopener noreferrer">
+                <img src="/img/misc/carousel/racket.png" alt="Racket" className={styles.skillCardIcon} />
+              </a>
             </article>
 
             {/* duplicate set (required for seamless loop) */}
             <article className={styles.skillCard} title="Python">
-              <img src="/img/misc/carousel/python.png" alt="Python" />
+              <a href="https://python.org/" target="_blank" rel="noopener noreferrer">
+                <img src="/img/misc/carousel/python.png" alt="Python" className={styles.skillCardIcon} />
+              </a>
             </article>
 
             <article className={styles.skillCard} title="Java">
-              <img src="/img/misc/carousel/java.png" alt="Java" />
+              <a href="https://www.java.com/" target="_blank" rel="noopener noreferrer">
+                <img src="/img/misc/carousel/java.png" alt="Java" className={styles.skillCardIcon} />
+              </a>
             </article>
 
             <article className={styles.skillCard} title="LaTeX">
-              <img src="/img/misc/carousel/latex.png" alt="LaTeX" />
+              <a href="https://www.latex-project.org/" target="_blank" rel="noopener noreferrer">
+                <img src="/img/misc/carousel/latex.png" alt="LaTeX" className={styles.skillCardIcon} />
+              </a>
             </article>
 
             <article className={styles.skillCard} title="Bash">
-              <img src="/img/misc/carousel/bash.png" alt="Bash" />
+              <a href="https://www.gnu.org/software/bash/" target="_blank" rel="noopener noreferrer">
+                <img src="/img/misc/carousel/bash.png" alt="Bash" className={styles.skillCardIcon} />
+              </a>
             </article>
 
             <article className={styles.skillCard} title="C++">
-              <img src="/img/misc/carousel/cpp.png" alt="C++" />
+              <a href="https://isocpp.org/" target="_blank" rel="noopener noreferrer">
+                <img src="/img/misc/carousel/cpp.png" alt="C++" className={styles.skillCardIcon} />
+              </a>
             </article>
 
             <article className={styles.skillCard} title="Racket">
-              <img src="/img/misc/carousel/racket.png" alt="Racket" />
+              <a href="https://racket-lang.org/" target="_blank" rel="noopener noreferrer">
+                <img src="/img/misc/carousel/racket.png" alt="Racket" className={styles.skillCardIcon} />
+              </a>
             </article>
           </div>
         </div>
@@ -258,35 +282,43 @@ export function SkillsSection() {
           <div className={`${styles.skillsTrack} ${styles.toolsTrack}`}>            
             {/* original set */}
             <article className={styles.skillCard} title="Snowflake">
-              <img
-                src="/img/misc/carousel/snowflake.png"
-                alt="Snowflake"
-                className={styles.skillCardIcon}
-              />
+              <a href="https://www.snowflake.com/" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="/img/misc/carousel/snowflake.png"
+                  alt="Snowflake"
+                  className={styles.skillCardIcon}
+                />
+              </a>
             </article>
 
             <article className={styles.skillCard} title="AWS">
-              <img
-                src="/img/misc/carousel/aws.png"
-                alt="AWS"
-                className={styles.skillCardIcon}
-              />
+              <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="/img/misc/carousel/aws.png"
+                  alt="AWS"
+                  className={styles.skillCardIcon}
+                />
+              </a>
             </article>
 
             <article className={styles.skillCard} title="Docker">
-              <img
-                src="/img/misc/carousel/docker.png"
-                alt="Docker"
-                className={styles.skillCardIcon}
-              />
+              <a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="/img/misc/carousel/docker.png"
+                  alt="Docker"
+                  className={styles.skillCardIcon}
+                />
+              </a>
             </article>
 
             <article className={styles.skillCard} title="Git">
-              <img
-                src="/img/misc/carousel/git.png"
-                alt="Git"
-                className={styles.skillCardIcon}
-              />
+              <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="/img/misc/carousel/git.png"
+                  alt="Git"
+                  className={styles.skillCardIcon}
+                />
+              </a>
             </article>
 
             <article className={styles.skillCard} title="VS Code">
@@ -327,43 +359,53 @@ export function SkillsSection() {
               </a>
             </article>
             <article className={styles.skillCard} title="Snowflake">
-              <img
-                src="/img/misc/carousel/snowflake.png"
-                alt="Snowflake"
-                className={styles.skillCardIcon}
-              />
+              <a href="https://www.snowflake.com/" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="/img/misc/carousel/snowflake.png"
+                  alt="Snowflake"
+                  className={styles.skillCardIcon}
+                />
+              </a>
             </article>
 
             <article className={styles.skillCard} title="AWS">
-              <img
-                src="/img/misc/carousel/aws.png"
-                alt="AWS"
-                className={styles.skillCardIcon}
-              />
+              <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="/img/misc/carousel/aws.png"
+                  alt="AWS"
+                  className={styles.skillCardIcon}
+                />
+              </a>
             </article>
 
             <article className={styles.skillCard} title="Docker">
-              <img
-                src="/img/misc/carousel/docker.png"
-                alt="Docker"
-                className={styles.skillCardIcon}
-              />
+              <a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="/img/misc/carousel/docker.png"
+                  alt="Docker"
+                  className={styles.skillCardIcon}
+                />
+              </a>
             </article>
 
             <article className={styles.skillCard} title="Git">
-              <img
-                src="/img/misc/carousel/git.png"
-                alt="Git"
-                className={styles.skillCardIcon}
-              />
+              <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="/img/misc/carousel/git.png"
+                  alt="Git"
+                  className={styles.skillCardIcon}
+                />
+              </a>
             </article>
 
             <article className={styles.skillCard} title="VS Code">
-              <img
-                src="/img/misc/carousel/vs-code.png"
-                alt="VS Code"
-                className={styles.skillCardIcon}
-              />
+              <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="/img/misc/carousel/vs-code.png"
+                  alt="VS Code"
+                  className={styles.skillCardIcon}
+                />
+              </a>
             </article>
             
             <article className={styles.skillCard} title="Linux">
