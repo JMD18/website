@@ -16,9 +16,13 @@ export function ExperienceSection() {
 
       <div className={styles.experience}>
         <div className={styles.projectContent}>
+          <a href="https://www.kratosdefense.com/" target="_blank" rel="noopener noreferrer">
           <img src="/img/misc/KTOS.png" className={styles.projectIcon} alt="Kratos SRE" />
+          </a>
           <div>
-            <h3 className={styles.experienceTitle}>Associate Software Engineer, Kratos SRE, Inc. – Birmingham, AL</h3>
+            <a href="https://www.kratosdefense.com/" target="_blank" rel="noopener noreferrer" className={styles.linkText}>
+            <h3 className={styles.experienceTitle}>Associate Software Engineer, Kratos SRE, Inc. – Birmingham, AL</h3>  
+            </a>
             <p className={styles.projectSubtitle}>Active Security Clearance: Secret</p>
             <ul>
               <li className={styles.listItem}>Nondestructive Solutions Development | UltraSpec</li>
@@ -33,7 +37,9 @@ export function ExperienceSection() {
 
       <div className={styles.experience}>
         <div className={styles.projectContent}>
-          <img src="/img/misc/celestia_light-cropped.png" className={styles.projectIcon} alt="Celestia Diagnostics" />
+          <a href="https://www.celestialifesci.com" target="_blank" rel="noopener noreferrer">
+            <img src="/img/misc/celestia_light-cropped.png" className={styles.projectIcon} alt="Celestia Diagnostics" />
+          </a>
           <div>
             <h3 className={styles.experienceTitle}>Lead Python Developer, Celestia Diagnostics – Birmingham, AL</h3>
               <ul>
@@ -54,9 +60,13 @@ export function ExperienceSection() {
 
       <div className={styles.experience}>
         <div className={styles.projectContent}>
+          <a href="https://www.uab.edu" target="_blank" rel="noopener noreferrer">
           <img src="/img/misc/UAB-seal.png" className={styles.projectIcon} alt="UAB" />
+          </a>
           <div>
+          <a href="https://www.uab.edu" target="_blank" rel="noopener noreferrer" className={styles.linkText}>
           <h3 className={styles.experienceTitle}>Graduate Teaching Assistant, Probability & Statistics – University of Alabama at Birmingham</h3>
+          </a>
           <ul>
             <li className={styles.listItem}>Teach probability theory and Python programming (NumPy, Matplotlib, and related libraries).</li>
             <li className={styles.listItem}>Assist 200+ students through lectures, office hours, and collaborative instruction.</li>
@@ -68,9 +78,13 @@ export function ExperienceSection() {
     
       <div className={styles.experience}>
         <div className={styles.projectContent}>
-          <img src="/img/misc/saucey-pin-logo.png" className={styles.projectIcon} alt="Saucey Inc." />
+          <a href="https://www.saucey.com" target="_blank" rel="noopener noreferrer">
+            <img src="/img/misc/saucey-pin-logo.png" className={styles.projectIcon} alt="Saucey Inc." />
+          </a>
           <div>
+          <a href="https://www.saucey.com" target="_blank" rel="noopener noreferrer" className={styles.linkText}>
           <h3 className={styles.experienceTitle}>Catalog Specialist, Saucey Inc. – Remote</h3>
+          </a>
           <ul>
             <li className={styles.listItem}>Evaluated onboarding inventory for 100+ stores, providing actionable feedback.</li>
             <li className={styles.listItem}>Modified SQL and Bash scripts for automated onboarding and maintenance tasks.</li>
@@ -178,46 +192,302 @@ export function SkillsSection() {
     <section id="skills" className={styles.section}>
       <h2 className={styles.sectionTitle}>Skills</h2>
 
-      <div className={styles.project}>
-        <div className={styles.projectContent}>
-          <div>
-            <h3 className={styles.projectTitle}>Programming</h3>
+      {/* Programming (icons only) */}
+      <div className={styles.skillsSection}>
+        <h3 className={styles.skillsSectionTitle}>Programming</h3>
 
-            <p className={styles.skillsText}>
-              Python, Java, SQL/PostgreSQL, LaTeX, Bash,
-              GDScript, REST APIs, PowerShell
-            </p>
+        <div className={styles.skillsCarousel}>
+          <div className={`${styles.skillsTrack} ${styles.programmingTrack}`}>            {/* original set */}
+            <article className={styles.skillCard} title="Python">
+              <img src="/img/misc/carousel/python.png" alt="Python" />
+            </article>
+
+            <article className={styles.skillCard} title="Java">
+              <img src="/img/misc/carousel/java.png" alt="Java" />
+            </article>
+
+            <article className={styles.skillCard} title="LaTeX">
+              <img src="/img/misc/carousel/latex.png" alt="LaTeX" />
+            </article>
+
+            <article className={styles.skillCard} title="Bash">
+              <img src="/img/misc/carousel/bash.png" alt="Bash" />
+            </article>
+
+            <article className={styles.skillCard} title="C++">
+              <img src="/img/misc/carousel/cpp.png" alt="C++" />
+            </article>
+
+            <article className={styles.skillCard} title="Racket">
+              <img src="/img/misc/carousel/racket.png" alt="Racket" />
+            </article>
+
+            {/* duplicate set (required for seamless loop) */}
+            <article className={styles.skillCard} title="Python">
+              <img src="/img/misc/carousel/python.png" alt="Python" />
+            </article>
+
+            <article className={styles.skillCard} title="Java">
+              <img src="/img/misc/carousel/java.png" alt="Java" />
+            </article>
+
+            <article className={styles.skillCard} title="LaTeX">
+              <img src="/img/misc/carousel/latex.png" alt="LaTeX" />
+            </article>
+
+            <article className={styles.skillCard} title="Bash">
+              <img src="/img/misc/carousel/bash.png" alt="Bash" />
+            </article>
+
+            <article className={styles.skillCard} title="C++">
+              <img src="/img/misc/carousel/cpp.png" alt="C++" />
+            </article>
+
+            <article className={styles.skillCard} title="Racket">
+              <img src="/img/misc/carousel/racket.png" alt="Racket" />
+            </article>
           </div>
         </div>
       </div>
 
-      <div className={styles.project}>
-        <div className={styles.projectContent}>
-          <div>
-            <h3 className={styles.projectTitle}>Mathematics</h3>
+      {/* Software & Tools */}
+      <div className={styles.skillsSection}>
+        <h3 className={styles.skillsSectionTitle}>Software & Tools</h3>
 
-            <p className={styles.skillsText}>
-              Linear Algebra, Differential Equations,
-              Advanced Calculus, Probability Theory,
-              Discrete Mathematics
-            </p>
+        <div className={styles.skillsCarousel}>
+          <div className={`${styles.skillsTrack} ${styles.toolsTrack}`}>            
+            {/* original set */}
+            <article className={styles.skillCard} title="Snowflake">
+              <img
+                src="/img/misc/carousel/snowflake.png"
+                alt="Snowflake"
+                className={styles.skillCardIcon}
+              />
+            </article>
+
+            <article className={styles.skillCard} title="AWS">
+              <img
+                src="/img/misc/carousel/aws.png"
+                alt="AWS"
+                className={styles.skillCardIcon}
+              />
+            </article>
+
+            <article className={styles.skillCard} title="Docker">
+              <img
+                src="/img/misc/carousel/docker.png"
+                alt="Docker"
+                className={styles.skillCardIcon}
+              />
+            </article>
+
+            <article className={styles.skillCard} title="Git">
+              <img
+                src="/img/misc/carousel/git.png"
+                alt="Git"
+                className={styles.skillCardIcon}
+              />
+            </article>
+
+            <article className={styles.skillCard} title="VS Code">
+              <img
+                src="/img/misc/carousel/vs-code.png"
+                alt="VS Code"
+                className={styles.skillCardIcon}
+              />
+            </article>
+            
+            <article className={styles.skillCard} title="Linux">
+              <a href="https://www.linux.org/" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="/img/misc/carousel/linux.png"
+                  alt="Linux"
+                  className={styles.skillCardIcon}
+                />
+              </a>
+            </article>
+
+            <article className={styles.skillCard} title="PyTorch">
+              <a href="https://pytorch.org/" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="/img/misc/carousel/pytorch.png"
+                  alt="PyTorch"
+                  className={styles.skillCardIcon}
+                />
+              </a>
+            </article>
+
+            <article className={styles.skillCard} title="TensorFlow">
+              <a href="https://www.tensorflow.org/" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="/img/misc/carousel/tensorflow.png"
+                  alt="TensorFlow"
+                  className={styles.skillCardIcon}
+                />
+              </a>
+            </article>
+            <article className={styles.skillCard} title="Snowflake">
+              <img
+                src="/img/misc/carousel/snowflake.png"
+                alt="Snowflake"
+                className={styles.skillCardIcon}
+              />
+            </article>
+
+            <article className={styles.skillCard} title="AWS">
+              <img
+                src="/img/misc/carousel/aws.png"
+                alt="AWS"
+                className={styles.skillCardIcon}
+              />
+            </article>
+
+            <article className={styles.skillCard} title="Docker">
+              <img
+                src="/img/misc/carousel/docker.png"
+                alt="Docker"
+                className={styles.skillCardIcon}
+              />
+            </article>
+
+            <article className={styles.skillCard} title="Git">
+              <img
+                src="/img/misc/carousel/git.png"
+                alt="Git"
+                className={styles.skillCardIcon}
+              />
+            </article>
+
+            <article className={styles.skillCard} title="VS Code">
+              <img
+                src="/img/misc/carousel/vs-code.png"
+                alt="VS Code"
+                className={styles.skillCardIcon}
+              />
+            </article>
+            
+            <article className={styles.skillCard} title="Linux">
+              <a href="https://www.linux.org/" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="/img/misc/carousel/linux.png"
+                  alt="Linux"
+                  className={styles.skillCardIcon}
+                />
+              </a>
+            </article>
+
+            <article className={styles.skillCard} title="PyTorch">
+              <a href="https://pytorch.org/" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="/img/misc/carousel/pytorch.png"
+                  alt="PyTorch"
+                  className={styles.skillCardIcon}
+                />
+              </a>
+            </article>
+
+            <article className={styles.skillCard} title="TensorFlow">
+              <a href="https://www.tensorflow.org/" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="/img/misc/carousel/tensorflow.png"
+                  alt="TensorFlow"
+                  className={styles.skillCardIcon}
+                />
+              </a>
+            </article>
           </div>
         </div>
       </div>
 
-      <div className={styles.project}>
-        <div className={styles.projectContent}>
-          <div>
-            <h3 className={styles.projectTitle}>Software & Tools</h3>
+      {/* Mathematics */}
+      <div className={styles.skillsSection}>
+        <h3 className={styles.skillsSectionTitle}>Mathematics</h3>
 
-            <p className={styles.skillsText}>
-              AWS (Lambda, S3, EC2, SQS, IAM), Snowflake,
-              Docker, Git, Linux, Godot Engine,
-              VS Code, IntelliJ, MS Office
-            </p>
+        <div className={styles.skillsCarousel}>
+          <div className={`${styles.skillsTrack} ${styles.mathTrack}`}>
+            <article className={styles.skillCard}>
+              <span>Linear Algebra</span>
+            </article>
+
+            <article className={styles.skillCard}>
+              <span>Differential Equations</span>
+            </article>
+
+            <article className={styles.skillCard}>
+              <span>Advanced Calculus</span>
+            </article>
+
+            <article className={styles.skillCard}>
+              <span>Probability Theory</span>
+            </article>
+
+            <article className={styles.skillCard}>
+              <span>Discrete Mathematics</span>
+            </article>
+
+            <article className={styles.skillCard}>
+              <span>Linear Algebra</span>
+            </article>
+
+            <article className={styles.skillCard}>
+              <span>Differential Equations</span>
+            </article>
+
+            <article className={styles.skillCard}>
+              <span>Advanced Calculus</span>
+            </article>
+
+            <article className={styles.skillCard}>
+              <span>Probability Theory</span>
+            </article>
+
+            <article className={styles.skillCard}>
+              <span>Discrete Mathematics</span>
+            </article>
+          
+            <article className={styles.skillCard}>
+              <span>Linear Algebra</span>
+            </article>
+
+            <article className={styles.skillCard}>
+              <span>Differential Equations</span>
+            </article>
+
+            <article className={styles.skillCard}>
+              <span>Advanced Calculus</span>
+            </article>
+
+            <article className={styles.skillCard}>
+              <span>Probability Theory</span>
+            </article>
+
+            <article className={styles.skillCard}>
+              <span>Discrete Mathematics</span>
+            </article>
+
+            <article className={styles.skillCard}>
+              <span>Linear Algebra</span>
+            </article>
+
+            <article className={styles.skillCard}>
+              <span>Differential Equations</span>
+            </article>
+
+            <article className={styles.skillCard}>
+              <span>Advanced Calculus</span>
+            </article>
+
+            <article className={styles.skillCard}>
+              <span>Probability Theory</span>
+            </article>
+
+            <article className={styles.skillCard}>
+              <span>Discrete Mathematics</span>
+            </article>          
           </div>
         </div>
       </div>
+
     </section>
   );
 }

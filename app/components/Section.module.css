@@ -1,8 +1,13 @@
+/* =========================
+   ANIMATIONS
+========================= */
+
 @keyframes slideInLeft {
   from {
     opacity: 0;
     transform: translateX(-30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -14,6 +19,7 @@
     opacity: 0;
     transform: translateX(30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -24,6 +30,7 @@
   from {
     width: 0;
   }
+
   to {
     width: 100%;
   }
@@ -34,6 +41,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -41,13 +49,19 @@
 }
 
 @keyframes shimmer {
-  0%, 100% {
+  0%,
+  100% {
     background-position: -1000px 0;
   }
+
   50% {
     background-position: 1000px 0;
   }
 }
+
+/* =========================
+   HOME
+========================= */
 
 .home {
   text-align: center;
@@ -80,6 +94,10 @@
   color: #4d8a66;
   transform: translateY(-2px);
 }
+
+/* =========================
+   SECTION LAYOUT
+========================= */
 
 .section {
   margin-bottom: 3rem;
@@ -119,9 +137,12 @@ section:nth-of-type(5) {
   position: absolute;
   bottom: 0;
   left: 0;
+
   width: 0;
   height: 3px;
+
   background: linear-gradient(90deg, #4d8a66, #355e44);
+
   transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
@@ -134,47 +155,42 @@ section:nth-of-type(5) {
   width: 100%;
 }
 
+/* =========================
+   SUBSECTION TITLES
+========================= */
+
 .subsectionTitle {
   font-size: 1.3rem;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
+
   color: #4d8a66;
+
   transition: all 0.3s ease;
+
   position: relative;
+
   padding-left: 10px;
+
   animation: fadeInUp 0.5s ease-out;
   animation-fill-mode: both;
 }
 
-.section .subsectionTitle:nth-of-type(1) {
-  animation-delay: 0.1s;
-}
-
-.section .subsectionTitle:nth-of-type(2) {
-  animation-delay: 0.25s;
-}
-
-.section .subsectionTitle:nth-of-type(3) {
-  animation-delay: 0.4s;
-}
-
-.section .subsectionTitle:nth-of-type(4) {
-  animation-delay: 0.55s;
-}
-
-.section .subsectionTitle:nth-of-type(5) {
-  animation-delay: 0.7s;
-}
-
 .subsectionTitle::before {
   content: '';
+
   position: absolute;
+
   left: 0;
   top: 50%;
+
   transform: translateY(-50%);
+
   width: 3px;
   height: 0;
+
   background: #4d8a66;
+
   transition: height 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
@@ -188,48 +204,24 @@ section:nth-of-type(5) {
   height: 100%;
 }
 
+/* =========================
+   LIST ITEMS
+========================= */
+
 .listItem {
   margin-left: 2rem;
   margin-bottom: 0.5rem;
+
   line-height: 1.6;
+
   transition: all 0.3s ease;
+
   position: relative;
+
   padding-left: 10px;
+
   animation: fadeInUp 0.5s ease-out;
   animation-fill-mode: both;
-}
-
-.subsectionTitle + ul .listItem:nth-child(1) {
-  animation-delay: 0.15s;
-}
-
-.subsectionTitle + ul .listItem:nth-child(2) {
-  animation-delay: 0.25s;
-}
-
-.subsectionTitle + ul .listItem:nth-child(3) {
-  animation-delay: 0.35s;
-}
-
-.subsectionTitle + ul .listItem:nth-child(4) {
-  animation-delay: 0.45s;
-}
-
-.subsectionTitle + ul .listItem:nth-child(5) {
-  animation-delay: 0.55s;
-}
-
-.subsectionTitle + ul .listItem:nth-child(6) {
-  animation-delay: 0.65s;
-}
-
-.listItem {
-  margin-left: 2rem;
-  margin-bottom: 0.5rem;
-  line-height: 1.6;
-  transition: all 0.3s ease;
-  position: relative;
-  padding-left: 10px;
 }
 
 .listItem:hover {
@@ -237,13 +229,21 @@ section:nth-of-type(5) {
   transform: translateX(5px);
 }
 
+/* =========================
+   DESCRIPTION
+========================= */
+
 .description {
   font-style: italic;
   color: #555;
   font-size: 0.9em;
+
   margin-top: 10px;
+
   transition: all 0.3s ease;
+
   padding: 8px 12px;
+
   border-left: 3px solid transparent;
 }
 
@@ -252,6 +252,10 @@ section:nth-of-type(5) {
   border-left-color: #4d8a66;
   color: #333;
 }
+
+/* =========================
+   PDF SECTION
+========================= */
 
 .pdfWrapper {
   margin-top: 2rem;
@@ -266,55 +270,32 @@ section:nth-of-type(5) {
 .pdfContainer {
   flex: 1;
   width: 50%;
+
   text-align: center;
+
   transition: all 0.3s ease;
+
   padding: 15px;
+
   border-radius: 8px;
+
   animation: fadeInUp 0.5s ease-out;
   animation-fill-mode: both;
-}
-
-/* Mobile-responsive papers section */
-@media (max-width: 768px) {
-  .pdfGrid {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  .pdfContainer {
-    width: 100%;
-    padding: 12px;
-  }
-}
-
-@media (max-width: 480px) {
-  .pdfGrid {
-    gap: 1rem;
-  }
-  
-  .pdfContainer {
-    padding: 10px;
-  }
-}
-
-#education .pdfGrid .pdfContainer:nth-child(1) {
-  animation-delay: 0.5s;
-}
-
-#education .pdfGrid .pdfContainer:nth-child(2) {
-  animation-delay: 0.65s;
 }
 
 .pdfContainer:hover {
   background-color: rgba(77, 138, 102, 0.08);
   transform: translateY(-5px);
+
   box-shadow: 0 8px 16px rgba(77, 138, 102, 0.15);
 }
 
 .pdfTitle {
   font-size: 1.1rem;
   margin-bottom: 1rem;
+
   color: #4d8a66;
+
   transition: all 0.3s ease;
 }
 
@@ -335,108 +316,280 @@ section:nth-of-type(5) {
 .pdfThumbnail {
   max-width: 200px;
   height: auto;
+
   border-radius: 8px;
+
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
   cursor: pointer;
+
   border: 2px solid transparent;
 }
 
 .pdfThumbnail:hover {
   transform: scale(1.12) rotate(2deg);
+
   box-shadow: 0 12px 24px rgba(77, 138, 102, 0.3);
+
   border-color: #4d8a66;
 }
 
-.skillCategory {
-  margin-bottom: 1.5rem;
-  transition: all 0.3s ease;
-  padding: 12px 15px;
-  border-radius: 6px;
+/* =========================
+   SKILLS SECTION
+========================= */
+
+.skillsSection {
+  margin-bottom: 2.5rem;
 }
 
-.skillCategory:hover {
-  background-color: rgba(77, 138, 102, 0.05);
-  transform: translateX(5px);
-}
-
-.skillsText {
-  line-height: 1.8;
-  transition: all 0.3s ease;
-}
-
-.boldText {
-  font-weight: bold;
+.skillsSectionTitle {
+  font-size: 1.25rem;
   color: #4d8a66;
-  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.carouselWrapper {
   position: relative;
 }
 
-.boldText::after {
+.carouselWrapper::before,
+.carouselWrapper::after {
   content: '';
+
   position: absolute;
-  bottom: -2px;
+  top: 0;
+
+  width: 60px;
+  height: 100%;
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+.carouselWrapper::before {
   left: 0;
-  width: 0;
-  height: 2px;
-  background: #4d8a66;
-  transition: width 0.3s ease;
+
+  background: linear-gradient(
+    to right,
+    #f8fbf8,
+    transparent
+  );
 }
 
-.skillsText:hover .boldText::after {
+.carouselWrapper::after {
+  right: 0;
+
+  background: linear-gradient(
+    to left,
+    #f8fbf8,
+    transparent
+  );
+}
+
+.skillsCarousel {
   width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
-.project {
+.skillsCarousel::-webkit-scrollbar {
+  display: none;
+}
+
+.skillCard {
+  flex: 0 0 140px;
+  width: 140px;
+  height: 140px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+  box-sizing: border-box;
+
+  border-radius: 18px;
+}
+
+.skillCard:hover {
+  transform: translateY(-6px) scale(1.03);
+
+  border-color: rgba(77, 138, 102, 0.35);
+
+  box-shadow:
+    0 10px 24px rgba(77, 138, 102, 0.16);
+}
+
+.skillCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.skillCard a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  text-decoration: none;
+}
+
+.skillCardIcon {
+  width: 100%;
+  height: 100%;
+
+  max-width: 90%;
+  max-height: 90%;
+
+  object-fit: contain;
+  display: block;
+  transition: transform 0.25s ease;
+}
+/* .skillCardIcon {
+  width: 100%;
+  height: 100%;
+  max-width: 90%;
+  max-height: 90%;
+
+  object-fit: contain;
+
+} */
+.skillCard:hover .skillCardIcon {
+  transform: scale(1.08);
+}
+
+.skillCard span {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #355e44;
+  text-align: center;
+}
+
+.mathBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.65rem 1rem;
+
+  border-radius: 999px;
+
+  background: rgba(77, 138, 102, 0.12);
+
+  color: #225b34;
+
+  white-space: nowrap;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.mathBadge:hover {
+  transform: translateY(-2px);
+
+  background: rgba(77, 138, 102, 0.18);
+}
+
+/* =========================
+   PROJECTS & EXPERIENCE
+========================= */
+
+.project,
+.experience {
   margin-bottom: 2rem;
+
   padding: 1.5rem;
+
   background-color: #e8f3ea;
+
   border-left: 4px solid #4d8a66;
+
   border-radius: 8px;
+
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
   position: relative;
+
   overflow: hidden;
 }
 
-.project::before {
+.experience {
+  animation: fadeInUp 0.5s ease-out;
+  animation-fill-mode: both;
+}
+
+.project::before,
+.experience::before {
   content: '';
+
   position: absolute;
+
   top: 0;
   left: -100%;
+
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(77, 138, 102, 0.1), transparent);
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(77, 138, 102, 0.1),
+    transparent
+  );
+
   transition: left 0.6s ease;
+
   z-index: 0;
 }
 
-.project:hover::before {
+.project:hover::before,
+.experience:hover::before {
   left: 100%;
 }
 
-.project:hover {
+.project:hover,
+.experience:hover {
   transform: translateY(-8px) translateX(8px);
+
   box-shadow: 0 12px 24px rgba(77, 138, 102, 0.25);
+
   border-left-color: #355e44;
+
   background-color: #fff;
 }
 
-.project:hover > * {
+.project:hover > *,
+.experience:hover > * {
   position: relative;
   z-index: 1;
 }
 
-.projectContent {
+.projectContent,
+.experience .projectContent {
   display: flex;
   gap: 1.5rem;
   align-items: flex-start;
+
+  min-height: 100px;
 }
 
 .projectIcon {
   width: 80px;
   height: 80px;
+
   object-fit: contain;
+
   flex-shrink: 0;
+
   transition: all 0.3s ease;
 }
 
@@ -444,109 +597,36 @@ section:nth-of-type(5) {
   transform: scale(1.1) rotate(-5deg);
 }
 
-.experience {
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  background-color: #e8f3ea;
-  border-left: 4px solid #4d8a66;
-  border-radius: 8px;
-  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-  position: relative;
-  overflow: hidden;
-  animation: fadeInUp 0.5s ease-out;
-  animation-fill-mode: both;
-}
-
-.experience::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(77, 138, 102, 0.1), transparent);
-  transition: left 0.6s ease;
-  z-index: 0;
-}
-
-.experience:hover::before {
-  left: 100%;
-}
-
-.experience:hover {
-  transform: translateY(-8px) translateX(8px);
-  box-shadow: 0 12px 24px rgba(77, 138, 102, 0.25);
-  border-left-color: #355e44;
-  background-color: #fff;
-}
-
-.experience:hover > * {
-  position: relative;
-  z-index: 1;
-}
-
-#experience .experience:nth-of-type(1) {
-  animation-delay: 0.1s;
-}
-
-#experience .experience:nth-of-type(2) {
-  animation-delay: 0.25s;
-}
-
-#experience .experience:nth-of-type(3) {
-  animation-delay: 0.4s;
-}
-
-#experience .experience:nth-of-type(4) {
-  animation-delay: 0.55s;
-}
-
-.projectTitle {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  color: #4d8a66;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.projectTitle:hover {
-  color: #355e44;
-  transform: translateX(5px);
-  text-shadow: 0 2px 8px rgba(77, 138, 102, 0.2);
-}
-
+.projectTitle,
 .experienceTitle {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
+
   color: #4d8a66;
+
   transition: all 0.3s ease;
+
   cursor: pointer;
 }
 
+.projectTitle:hover,
 .experienceTitle:hover {
   color: #355e44;
-  transform: translateX(5px);
-  text-shadow: 0 2px 8px rgba(77, 138, 102, 0.2);
-}
 
-/* copy projectcontent styles for experience */
-.experience.projectContent {
-  display: flex;
-  gap: 1.5rem;
-  align-items: flex-start;
-/* set min-height to ensure consistent height for all experience items */
-  min-height: 100px;
-  transition: all 0.3s ease;
-}
-.experience.projectContent:hover .projectIcon {
-  transform: scale(1.1) rotate(-5deg);
+  transform: translateX(5px);
+
+  text-shadow: 0 2px 8px rgba(77, 138, 102, 0.2);
 }
 
 .projectSubtitle {
   font-size: 1rem;
+
   color: #666;
+
   font-style: italic;
+
   margin-bottom: 1rem;
+
   transition: all 0.3s ease;
 }
 
@@ -554,40 +634,150 @@ section:nth-of-type(5) {
   color: #4d8a66;
 }
 
-/* Mobile-responsive experience section */
+/* =========================
+   TEXT UTILITIES
+========================= */
+
+.skillsText {
+  line-height: 1.8;
+  transition: all 0.3s ease;
+}
+
+.skillsTrack {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  animation: scrollLoop 18s linear infinite;
+}
+
+.programmingTrack {
+  animation-duration: 16s;
+}
+
+.toolsTrack {
+  animation-duration: 20s;
+}
+
+.mathTrack {
+  animation-duration: 30s;
+}
+
+.skillsTrack:hover {
+  animation-play-state: paused;
+}
+
+
+@keyframes scrollLoop {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.boldText {
+  font-weight: bold;
+  color: #4d8a66;
+
+  transition: all 0.3s ease;
+
+  position: relative;
+}
+
+.boldText::after {
+  content: '';
+
+  position: absolute;
+
+  bottom: -2px;
+  left: 0;
+
+  width: 0;
+  height: 2px;
+
+  background: #4d8a66;
+
+  transition: width 0.3s ease;
+}
+
+.skillsText:hover .boldText::after {
+  width: 100%;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
 @media (max-width: 768px) {
-  .experience.projectContent {
+  .pdfGrid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .pdfContainer {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .skillsCarousel {
+    gap: 0.8rem;
+  }
+
+  .skillCard {
+    flex: 0 0 130px;
+    min-width: 130px;
+  }
+
+  .projectContent,
+  .experience .projectContent {
     flex-direction: column;
     gap: 1rem;
+
     min-height: auto;
   }
-  
+
   .projectIcon {
     width: 60px;
     height: 60px;
-    align-self: flex-start;
   }
-  
+
+  .experience:hover,
+  .project:hover {
+    transform: translateY(-4px);
+  }
+
   .experience ul {
     width: 100%;
     margin: 0.5rem 0 0 0;
     padding-left: 20px;
   }
-  
-  .experience:hover {
-    transform: translateY(-4px);
-  }
 }
 
 @media (max-width: 480px) {
+  .pdfGrid {
+    gap: 1rem;
+  }
+
+  .pdfContainer {
+    padding: 10px;
+  }
+
+  .skillsCarousel {
+    gap: 0.75rem;
+  }
+
+  .skillCard {
+    flex: 0 0 120px;
+    min-width: 120px;
+  }
+
   .projectIcon {
     width: 50px;
     height: 50px;
   }
-  
+
   .experience ul {
-    width: 100%;
-    margin: 0.5rem 0 0 0;
     padding-left: 15px;
   }
 }
