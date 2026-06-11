@@ -9,8 +9,8 @@ export default function Socials() {
   const handleDownload = (e) => {
     e.preventDefault();
     const link = document.createElement('a');
-    link.href = '/summer_2025_res.pdf';
-    link.download = 'summer_2025_res.pdf';
+    link.href = '/spring_2026_resume.pdf';
+    link.download = 'spring_2026_resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

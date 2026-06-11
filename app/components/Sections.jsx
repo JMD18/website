@@ -541,10 +541,14 @@ export function ProjectsSection() {
 
       <div className={styles.project}>
         <div className={styles.projectContent}>
-          <img src="/img/misc/geo-grocer.svg" className={styles.projectIcon} alt="Geo Grocer" />
+          <a href="https://geo-grocer.com" target="_blank" rel="noopener noreferrer">
+            <img src="/img/misc/geo-grocer.svg" className={styles.projectIcon} alt="Geo Grocer" />
+          </a>
           <div>
-            <h3 className={styles.projectTitle}>Geo Grocer</h3>
-            <h4 className={styles.projectSubtitle}>Full-Stack Mobile-Ready Web Application</h4>
+            <a href="https://geo-grocer.com" target="_blank" rel="noopener noreferrer" className={styles.linkText}>
+              <h3 className={styles.projectTitle}>Geo Grocer</h3>
+            </a>
+            <h4 className={styles.projectSubtitle}>Full-Stack Mobile-Ready Web Application (Personal Project)</h4>
             <ul>
               <li className={styles.listItem}>Designed and built a full-stack grocery management app with <span className={styles.boldText}>React (Vite)</span>, <span className={styles.boldText}>FastAPI</span>, and <span className={styles.boldText}>SQLite</span>, deployed to production on Railway.</li>
               <li className={styles.listItem}>Implemented geolocation-based store detection, alerting users when they enter a saved store's radius via <span className={styles.boldText}>Web Push notifications</span> and a scheduled reminder system using <span className={styles.boldText}>APScheduler</span>.</li>
