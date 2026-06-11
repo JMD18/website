@@ -541,6 +541,24 @@ export function ProjectsSection() {
 
       <div className={styles.project}>
         <div className={styles.projectContent}>
+          <img src="/img/misc/geo-grocer.png" className={styles.projectIcon} alt="Geo Grocer" />
+          <div>
+            <h3 className={styles.projectTitle}>Geo Grocer</h3>
+            <h4 className={styles.projectSubtitle}>Full-Stack Mobile-Ready Web Application</h4>
+            <ul>
+              <li className={styles.listItem}>Designed and built a full-stack grocery management app with <span className={styles.boldText}>React (Vite)</span>, <span className={styles.boldText}>FastAPI</span>, and <span className={styles.boldText}>SQLite</span>, deployed to production on Railway.</li>
+              <li className={styles.listItem}>Implemented geolocation-based store detection, alerting users when they enter a saved store's radius via <span className={styles.boldText}>Web Push notifications</span> and a scheduled reminder system using <span className={styles.boldText}>APScheduler</span>.</li>
+              <li className={styles.listItem}>Built a household sharing system allowing users to invite members and collaborate on grocery lists with configurable view-only or edit access.</li>
+              <li className={styles.listItem}>Developed touch gesture interactions for mobile — drag-to-reorder, swipe-to-delete, swipe-to-check, and long-press inline editing — using <span className={styles.boldText}>dnd-kit</span> and custom pointer event handlers.</li>
+              <li className={styles.listItem}>Added real-time shared list sync via polling with <span className={styles.boldText}>updated_at</span> timestamp diffing to push changes to collaborators within seconds.</li>
+              <li className={styles.listItem}>Prepared for native iOS and Android distribution using <span className={styles.boldText}>Capacitor</span>, with guest session support and seamless account conversion.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.project}>
+        <div className={styles.projectContent}>
           <img src="/img/misc/nvda.png" className={styles.projectIcon} alt="CUDA-Accelerated Graham Scan" />
           <div>
             <h3 className={styles.projectTitle}>CUDA-Accelerated Graham Scan</h3>
