@@ -17,11 +17,11 @@ export function ExperienceSection() {
       <div className={styles.experience}>
         <div className={styles.projectContent}>
           <a href="https://www.kratosdefense.com/" target="_blank" rel="noopener noreferrer">
-          <img src="/img/misc/KTOS.png" className={styles.projectIcon} alt="Kratos SRE" />
+          <img src="/img/misc/KTOS.png" className={styles.projectIcon} alt="Kratos Defense Logo" />
           </a>
           <div>
             <a href="https://www.kratosdefense.com/" target="_blank" rel="noopener noreferrer" className={styles.linkText}>
-            <h3 className={styles.experienceTitle}>Associate Software Engineer, Kratos SRE, Inc. – Birmingham, AL</h3>  
+            <h3 className={styles.experienceTitle}>Software Engineer, Kratos SRE, Inc. – Birmingham, AL</h3>  
             </a>
             <p className={styles.projectSubtitle}>Active Security Clearance: Secret</p>
             <ul>
