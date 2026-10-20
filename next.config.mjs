@@ -6,10 +6,14 @@ const bakeshopUrl = process.env.BAKESHOP_URL?.replace(/\/+$/, "");
 const nextConfig = {
   async rewrites() {
     if (!bakeshopUrl) return [];
-    return [
-      { source: "/bakeshop", destination: `${bakeshopUrl}/bakeshop` },
-      { source: "/bakeshop/:path+", destination: `${bakeshopUrl}/bakeshop/:path+` },
-    ];
+    return {
+      // beforeFiles: forward before this site looks at its own pages, so the
+      // bakery's page-data requests (?_rsc=...) reach the bakery too.
+      beforeFiles: [
+        { source: "/bakeshop", destination: `${bakeshopUrl}/bakeshop` },
+        { source: "/bakeshop/:path+", destination: `${bakeshopUrl}/bakeshop/:path+` },
+      ],
+    };
   },
 };
 
